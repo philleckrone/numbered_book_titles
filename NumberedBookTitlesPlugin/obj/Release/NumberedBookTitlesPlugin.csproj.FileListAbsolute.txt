@@ -1,0 +1,5 @@
+C:\ClaudeCode Projects\Numbered_Book_Titles\NumberedBookTitlesPlugin\bin\Release\NumberedBookTitlesPlugin.dll
+C:\ClaudeCode Projects\Numbered_Book_Titles\NumberedBookTitlesPlugin\bin\Release\NumberedBookTitlesPlugin.pdb
+C:\ClaudeCode Projects\Numbered_Book_Titles\NumberedBookTitlesPlugin\obj\Release\NumberedBookTitlesPlugin.csprojResolveAssemblyReference.cache
+C:\ClaudeCode Projects\Numbered_Book_Titles\NumberedBookTitlesPlugin\obj\Release\NumberedBookTitlesPlugin.dll
+C:\ClaudeCode Projects\Numbered_Book_Titles\NumberedBookTitlesPlugin\obj\Release\NumberedBookTitlesPlugin.pdb

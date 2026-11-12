@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+          Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!-- Test host only: never deployed. Builds the plugin's Paratext-free sources into an exe. -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NumberedBookTitlesTests</RootNamespace>
+    <AssemblyName>NumberedBookTitlesTestHost</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>5</LangVersion>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\NumberedBookTitlesPlugin\FixRunner.cs">
+      <Link>FixRunner.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NumberedBookTitlesPlugin\IBookSource.cs">
+      <Link>IBookSource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NumberedBookTitlesPlugin\NumberedBookTitlesForm.cs">
+      <Link>NumberedBookTitlesForm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NumberedBookTitlesPlugin\Strings.cs">
+      <Link>Strings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\NumberedBookTitlesPlugin\TitleScanner.cs">
+      <Link>TitleScanner.cs</Link>
+    </Compile>
+    <Compile Include="FolderBookSource.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

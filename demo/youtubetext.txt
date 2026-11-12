@@ -1,0 +1,20 @@
+﻿Numbered Book Titles is a Paratext tool that checks that the numbered books, 1 Samuel to 3 John, write their number the same way in the running header, the table of contents lines, the main titles and the book names. For each field, the way most books write the number is the usual one, and the books that write it differently are listed with a suggested change. It changes the lines you tick, after adding a point to the project history and keeping a backup of each changed book.
+
+Download Install_Phils_tools.exe from the Paratext Plugins folder, and tick Numbered Book Titles in it:
+https://short.do/HgUb7T
+
+0:18 How do I open Numbered Book Titles?
+0:27 How does it decide what is wrong?
+0:47 What does each row show?
+1:07 Why can't the book names be changed here?
+1:21 Can I see every numbered book at once?
+1:37 How do I change the lines?
+1:49 Can I undo the changes?
+2:02 Where do I see what was changed?
+2:18 How do I install the tool?
+
+Created with Claude AI.
+Narration: AI-generated voice (Microsoft Azure AI Speech, voice "Jenny").
+Music from Free To Use
+Source: https://freetouse.com/music
+Coconut Kind of Love by Aetheric

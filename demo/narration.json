@@ -1,0 +1,67 @@
+{
+  "cues": "{1} before a phrase shows box 1 of the step from there on, {0,2} boxes 0 and 2, {} none; the pointer goes on the first box named. Cues are not spoken or shown. 'q' is the step's question in the YouTube timecodes (youtubetext.txt).",
+  "youtube": {
+    "en": {
+      "about": "Numbered Book Titles is a Paratext tool that checks that the numbered books, 1 Samuel to 3 John, write their number the same way in the running header, the table of contents lines, the main titles and the book names. For each field, the way most books write the number is the usual one, and the books that write it differently are listed with a suggested change. It changes the lines you tick, after adding a point to the project history and keeping a backup of each changed book.",
+      "download": "Download Install_Phils_tools.exe from the Paratext Plugins folder, and tick Numbered Book Titles in it:",
+      "link": "https://short.do/HgUb7T",
+      "credits": [
+        "Created with Claude AI.",
+        "Narration: AI-generated voice (Microsoft Azure AI Speech, voice \"Jenny\").",
+        "Music from Free To Use",
+        "Source: https://freetouse.com/music",
+        "Coconut Kind of Love by Aetheric"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "id": "title",
+      "en": { "title": "Numbered Book Titles", "sub": "A Paratext tool: write the number of 1 Samuel to 3 John the same way everywhere", "text": "Numbered Book Titles is a Paratext tool. It checks that the numbered books, from 1 Samuel to 3 John, write their number the same way in every title and name." }
+    },
+    {
+      "id": "s00_menu",
+      "en": { "title": "Open it from the Tools menu", "q": "How do I open Numbered Book Titles?", "text": "In Paratext, open the project. Then choose {0}Tools, then {1}Numbered Book Titles." }
+    },
+    {
+      "id": "s01_open",
+      "en": { "title": "The books that differ", "q": "How does it decide what is wrong?", "text": "{0}Each field, such as the running header or the table of contents, is compared on its own. The way most numbered books write the number there is the usual one. {1}Here, 17 numbered books were compared, and 10 differences were found. {2}The list shows the books that write it differently." }
+    },
+    {
+      "id": "s02_row",
+      "en": { "title": "One difference", "q": "What does each row show?", "text": "{0}In First Thessalonians, the running header says 1st, with an ending. {1}That is how this line writes the number. {2}But most books write the number and a space, such as 1 John. {3}So the change offered is 1 Tesalonicenses. You can also type your own text here." }
+    },
+    {
+      "id": "s03_booknames",
+      "en": { "title": "Book names are changed in Paratext", "q": "Why can't the book names be changed here?", "text": "{0}The book names are listed too, so you can see them. {1}But this tool cannot change them. Change them in Paratext, in Scripture reference settings, on the Book names tab." }
+    },
+    {
+      "id": "s04_all",
+      "en": { "title": "All numbered books at once", "q": "Can I see every numbered book at once?", "text": "{0}The All numbered books tab shows every numbered book, field by field. {1}Each row is a book. {2}Highlighted cells write the number differently from the rest of their column. Double-click a book to go to its header in Paratext." }
+    },
+    {
+      "id": "s05_tick",
+      "en": { "title": "Tick the lines to change", "q": "How do I change the lines?", "text": "{0}Tick all that can change ticks every line this tool can change. {1}You can also tick them one by one. {2}Then click Change ticked lines." }
+    },
+    {
+      "id": "s06_confirm",
+      "en": { "title": "A history point and a backup", "q": "Can I undo the changes?", "text": "{0}Before changing anything, the tool adds a point to the project history, and saves each changed book as a backup file in the project's local folder. {1}Click Yes." }
+    },
+    {
+      "id": "s07_results",
+      "en": { "title": "The results", "q": "Where do I see what was changed?", "text": "{0}The results list the lines changed, book by book. Only books you have permission to edit are changed. {1}The project is read again. {2}Now only the book names are left, to change in Paratext." }
+    },
+    {
+      "id": "sec_install",
+      "en": { "title": "Installing the tool", "q": "How do I install the tool?", "text": "Installing the tool." }
+    },
+    {
+      "id": "i5_ready",
+      "en": { "title": "Ready to use", "text": "Start Paratext again. {1,0}Numbered Book Titles is now on the Tools menu." }
+    },
+    {
+      "id": "end",
+      "en": { "title": "Numbered Book Titles", "sub": "Each field compared on its own  ·  A suggested change for each line  ·  A history point and a backup first", "text": "Numbered Book Titles finds the numbered books that write their number differently, suggests the usual way, and changes the lines you tick, after adding a history point and keeping a backup." }
+    }
+  ]
+}

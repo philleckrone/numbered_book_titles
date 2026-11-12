@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+\viewkind4\uc1
+\pard\sa200\sl276\slmult1\f0\fs28\b T\'cdTULOS DE LIBROS NUMERADOS 1.1 (COMPLEMENTO DE PARATEXT)\b0\fs22\par
+\par
+\b PROP\'d3SITO\b0\par
+T\'edtulos de libros numerados es un complemento de Paratext. Revisa que los libros numerados (1 Samuel a 2 Cr\'f3nicas, 1 Corintios a 3 Juan) escriban su n\'famero de la misma forma, y cambia las l\'edneas que usted elija a la forma habitual. Encuentra las mismas diferencias que la secci\'f3n "Libros numerados" de la verificaci\'f3n personalizada Informe de los TOC.\par
+Cada uno de estos campos se compara por separado entre los libros numerados:\par
+\tab \\h, \\toc1, \\toc2, \\toc3 y el t\'edtulo principal (\\mt, \\mt1, \\mt2 ... unidos en el orden en que aparecen).\par
+\tab Los nombres largo, corto y abreviatura de BookNames.xml.\par
+Para cada campo, el complemento determina c\'f3mo se escribe el n\'famero en cada libro:\par
+\tab Un n\'famero y un espacio (1 Juan), un n\'famero y un espacio de no separaci\'f3n, un n\'famero sin espacio (1Juan), un n\'famero y un punto (1. Juan).\par
+\tab Un n\'famero con terminaci\'f3n: 1.\'ba, 1\'aa, 1er, 1ro, 1st, 2e y similares.\par
+\tab Un n\'famero romano (I Juan, II Juan), o un n\'famero o n\'famero romano despu\'e9s del nombre (Juan 1, Juan II).\par
+\tab Una palabra (Primera, Segundo, First).\par
+La forma en que la mayor\'eda de los libros lo escribe en ese campo es la habitual, y se enumera cada libro que lo escribe de otra forma. Campos distintos pueden usar formas distintas: \\toc1 puede usar una palabra ("Primera carta de Juan") mientras \\toc2 usa un n\'famero ("1 Juan"). Si ninguna forma es claramente la m\'e1s com\'fan, se enumeran todos los libros de ese campo.\par
+Dos palabras ordinales no se comparan entre s\'ed: "Primera" y "First" cuentan como la misma forma, y "Primer libro" junto a "Primera carta" es gram\'e1tica correcta, no una diferencia.\par
+\par
+\b INSTALACI\'d3N\b0\par
+1. Descargue Install_Phils_tools.exe de la carpeta Paratext_Plugins. Si el navegador le advierte sobre el archivo, elija conservarlo.\par
+2. Cierre Paratext.\par
+3. Haga doble clic en Install_Phils_tools.exe. Si Windows dice que protegi\'f3 su PC, haga clic en "M\'e1s informaci\'f3n" y luego en "Ejecutar de todas formas" (el instalador todav\'eda no est\'e1 firmado).\par
+4. Marque T\'edtulos de libros numerados y haga clic en "Instalar / actualizar los marcados". Se instala en cada Paratext 9 del equipo. Si Windows le pide permiso, haga clic en S\'ed. La misma ventana actualiza el complemento m\'e1s adelante (su estado dice entonces "Actualizaci\'f3n disponible") o lo quita ("Quitar los marcados"), y su bot\'f3n "Gu\'eda del usuario" abre esta gu\'eda.\par
+\par
+\b C\'d3MO USARLO\b0\par
+1. Abra el proyecto en una ventana de Escritura y elija Herramientas > T\'edtulos de libros numerados...\par
+2. La pesta\'f1a Diferencias muestra una fila por cada libro y campo distinto: el libro, el campo, la l\'ednea del marcador, el texto actual, c\'f3mo se escribe all\'ed el n\'famero, la forma habitual en ese campo y el texto nuevo propuesto ("Cambiar a"). Todav\'eda no se cambia nada.\par
+3. Haga doble clic en una fila, o selecci\'f3nela y haga clic en "Ir en Paratext", para ir al encabezado del libro en Paratext. La ventana sigue abierta junto a Paratext.\par
+4. Revise el texto de "Cambiar a". Haga clic en \'e9l para escribir otro texto. Cuando no se puede determinar con seguridad un texto nuevo, la celda dice "(escriba el texto nuevo)". Al escribir un texto, la fila se marca.\par
+5. Marque las filas que desea cambiar ("Marcar todas las que se pueden cambiar" marca cada fila que tiene un texto nuevo), haga clic en "Cambiar las l\'edneas marcadas" y responda S\'ed.\par
+La pesta\'f1a "Todos los libros numerados" muestra cada libro numerado y cada campo en una sola tabla, con la forma habitual arriba y las celdas distintas resaltadas.\par
+\par
+\b EL TEXTO PROPUESTO\b0\par
+\tab Cuando la forma habitual usa un n\'famero, el n\'famero se escribe de esa forma delante (o detr\'e1s) del resto del texto: "1st Tesalonicenses" y "Primero Pedro" pasan a "1 Tesalonicenses" y "1 Pedro", "II Juan" pasa a "2 Juan".\par
+\tab Una palabra se cambia por un n\'famero solo cuando el resto del texto es el nombre del libro tal como lo escribe otro campo del mismo libro despu\'e9s de un n\'famero. As\'ed, "Primera carta a los Corintios" no se convierte en "1 carta a los Corintios": escriba usted el texto.\par
+\tab Cuando la forma habitual usa una palabra, \\toc1 toma el t\'edtulo de \\mt, y una sola l\'ednea \\mt toma \\toc1. Si no, la palabra se toma de los otros libros con el mismo n\'famero, si todos usan la misma palabra.\par
+\tab En \\mt solo se cambia la l\'ednea \\mt que tiene el n\'famero: la primera, o la \'faltima cuando el n\'famero va despu\'e9s del nombre.\par
+Un complemento no puede cambiar los nombres de BookNames.xml. C\'e1mbielos en Paratext: Configuraci\'f3n de referencias b\'edblicas..., pesta\'f1a Nombres de libros.\par
+\par
+\b QU\'c9 PASA AL CAMBIAR\b0\par
+1. Se agrega un punto al historial del proyecto ("T\'edtulos de libros numerados: antes de cambiar ..."). Si Paratext no puede registrarlo (por ejemplo, porque el proyecto est\'e1 en uso), no se cambia nada y la ventana lo indica.\par
+2. Cada libro que va a cambiar se guarda completo como Backup_LIBRO_fecha-hora.bak en la carpeta local\\NumberedBookTitles del proyecto, que Enviar/Recibir no comparte.\par
+3. Solo se cambian las l\'edneas marcadas, y solo el texto despu\'e9s de su marcador. El encabezado est\'e1 en el cap\'edtulo 1, as\'ed que solo se escribe ese cap\'edtulo, y solo en los libros que usted puede editar. Las filas de libros que no puede editar aparecen en gris con "no puede editar".\par
+4. Si el encabezado de un libro cambi\'f3 despu\'e9s de la revisi\'f3n, ese libro no se toca y se indica: haga clic en "Revisar de nuevo" y vuelva a intentarlo.\par
+5. El cuadro de resultados muestra lo que se cambi\'f3 en cada libro y lo que no se cambi\'f3. Luego la lista se revisa de nuevo.\par
+}

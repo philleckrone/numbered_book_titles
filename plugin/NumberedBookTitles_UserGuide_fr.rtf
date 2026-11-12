@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+\viewkind4\uc1
+\pard\sa200\sl276\slmult1\f0\fs28\b TITRES DES LIVRES NUM\'c9ROT\'c9S 1.1 (MODULE D'EXTENSION DE PARATEXT)\b0\fs22\par
+\par
+\b BUT\b0\par
+Titres des livres num\'e9rot\'e9s est un module d'extension (plugin) de Paratext. Il v\'e9rifie que les livres num\'e9rot\'e9s (1 Samuel \'e0 2 Chroniques, 1 Corinthiens \'e0 3 Jean) \'e9crivent leur num\'e9ro de la m\'eame fa\'e7on, et met les lignes que vous choisissez dans la fa\'e7on habituelle. Il trouve les m\'eames diff\'e9rences que la section \'ab Livres num\'e9rot\'e9s \'bb de la v\'e9rification personnalis\'e9e Rapport des TOC.\par
+Chacun de ces champs est compar\'e9 s\'e9par\'e9ment entre les livres num\'e9rot\'e9s :\par
+\tab \\h, \\toc1, \\toc2, \\toc3 et le titre principal (\\mt, \\mt1, \\mt2 ... joints dans l'ordre o\'f9 ils apparaissent).\par
+\tab Les noms long, court et abr\'e9viation de BookNames.xml.\par
+Pour chaque champ, le module d\'e9termine comment le num\'e9ro est \'e9crit dans chaque livre :\par
+\tab Un num\'e9ro et une espace (1 Jean), un num\'e9ro et une espace ins\'e9cable, un num\'e9ro sans espace (1Jean), un num\'e9ro et un point (1. Jean).\par
+\tab Un num\'e9ro avec une terminaison : 1er, 1re, 2e, 1st, 1.\'ba, 1\'aa et autres.\par
+\tab Un chiffre romain (I Jean, II Jean), ou un num\'e9ro ou chiffre romain apr\'e8s le nom (Jean 1, Jean II).\par
+\tab Un mot (Premi\'e8re, Deuxi\'e8me, First).\par
+La fa\'e7on dont la plupart des livres l'\'e9crivent dans ce champ est la fa\'e7on habituelle, et chaque livre qui l'\'e9crit autrement est list\'e9. Des champs diff\'e9rents peuvent utiliser des fa\'e7ons diff\'e9rentes : \\toc1 peut utiliser un mot (\'ab Premi\'e8re \'e9p\'eetre de Jean \'bb) tandis que \\toc2 utilise un num\'e9ro (\'ab 1 Jean \'bb). Si aucune fa\'e7on n'est nettement la plus courante, tous les livres de ce champ sont list\'e9s.\par
+Deux mots ordinaux ne sont pas compar\'e9s entre eux : \'ab Premier \'bb et \'ab First \'bb comptent comme la m\'eame fa\'e7on, et \'ab Premier livre \'bb \'e0 c\'f4t\'e9 de \'ab Premi\'e8re \'e9p\'eetre \'bb est une question de grammaire, pas une diff\'e9rence.\par
+\par
+\b INSTALLATION\b0\par
+1. T\'e9l\'e9chargez Install_Phils_tools.exe depuis le dossier Paratext_Plugins. Si le navigateur vous avertit au sujet du fichier, choisissez de le conserver.\par
+2. Fermez Paratext.\par
+3. Double-cliquez sur Install_Phils_tools.exe. Si Windows indique qu'il a prot\'e9g\'e9 votre ordinateur, cliquez sur \'ab Informations compl\'e9mentaires \'bb, puis sur \'ab Ex\'e9cuter quand m\'eame \'bb (l'installateur n'est pas encore sign\'e9).\par
+4. Cochez Titres des livres num\'e9rot\'e9s et cliquez sur \'ab Installer / mettre \'e0 jour \'bb. Il s'installe dans chaque Paratext 9 de l'ordinateur. Si Windows demande l'autorisation, cliquez sur Oui. La m\'eame fen\'eatre met le module \'e0 jour plus tard (son statut indique alors \'ab Mise \'e0 jour disponible \'bb) ou le retire (\'ab Supprimer les coch\'e9s \'bb), et son bouton \'ab Guide de l'utilisateur \'bb ouvre ce guide.\par
+\par
+\b UTILISATION\b0\par
+1. Ouvrez le projet dans une fen\'eatre de texte biblique et choisissez Outils > Titres des livres num\'e9rot\'e9s...\par
+2. L'onglet Diff\'e9rences affiche une ligne par livre et par champ diff\'e9rent : le livre, le champ, la ligne du marqueur, le texte actuel, la fa\'e7on dont le num\'e9ro y est \'e9crit, la fa\'e7on habituelle dans ce champ et le nouveau texte propos\'e9 (\'ab Remplacer par \'bb). Rien n'est encore modifi\'e9.\par
+3. Double-cliquez sur une ligne, ou s\'e9lectionnez-la et cliquez sur \'ab Aller dans Paratext \'bb, pour aller \'e0 l'en-t\'eate du livre dans Paratext. La fen\'eatre reste ouverte \'e0 c\'f4t\'e9 de Paratext.\par
+4. V\'e9rifiez le texte de \'ab Remplacer par \'bb. Cliquez dessus pour taper un autre texte. Quand aucun nouveau texte ne peut \'eatre d\'e9termin\'e9 sans risque, la cellule indique \'ab (tapez le nouveau texte) \'bb. Taper un texte coche la ligne.\par
+5. Cochez les lignes \'e0 modifier (\'ab Cocher toutes celles qui peuvent changer \'bb coche chaque ligne qui a un nouveau texte), puis cliquez sur \'ab Modifier les lignes coch\'e9es \'bb et r\'e9pondez Oui.\par
+L'onglet \'ab Tous les livres num\'e9rot\'e9s \'bb montre chaque livre num\'e9rot\'e9 et chaque champ dans un seul tableau, avec la fa\'e7on habituelle en haut et les cellules diff\'e9rentes en surbrillance.\par
+\par
+\b LE TEXTE PROPOS\'c9\b0\par
+\tab Quand la fa\'e7on habituelle utilise un num\'e9ro, le num\'e9ro est \'e9crit de cette fa\'e7on devant (ou apr\'e8s) le reste du texte : \'ab 1re Thessaloniciens \'bb et \'ab Premier Pierre \'bb deviennent \'ab 1 Thessaloniciens \'bb et \'ab 1 Pierre \'bb, \'ab II Jean \'bb devient \'ab 2 Jean \'bb.\par
+\tab Un mot n'est remplac\'e9 par un num\'e9ro que si le reste du texte est le nom du livre tel qu'un autre champ du m\'eame livre l'\'e9crit apr\'e8s un num\'e9ro. Ainsi, \'ab Premi\'e8re \'e9p\'eetre aux Corinthiens \'bb ne devient pas \'ab 1 \'e9p\'eetre aux Corinthiens \'bb : tapez vous-m\'eame le texte.\par
+\tab Quand la fa\'e7on habituelle utilise un mot, \\toc1 prend le titre \\mt, et une seule ligne \\mt prend \\toc1. Sinon, le mot est pris dans les autres livres de m\'eame num\'e9ro, s'ils utilisent tous le m\'eame mot.\par
+\tab Pour \\mt, seule la ligne \\mt qui contient le num\'e9ro est modifi\'e9e : la premi\'e8re, ou la derni\'e8re quand le num\'e9ro vient apr\'e8s le nom.\par
+Un module d'extension ne peut pas modifier les noms de BookNames.xml. Modifiez-les dans Paratext : Param\'e8tres des r\'e9f\'e9rences bibliques..., onglet Noms des livres.\par
+\par
+\b CE QUI SE PASSE QUAND VOUS MODIFIEZ\b0\par
+1. Un point est ajout\'e9 \'e0 l'historique du projet (\'ab Titres des livres num\'e9rot\'e9s : avant de modifier ... \'bb). Si Paratext ne peut pas l'enregistrer (par exemple parce que le projet est en cours d'utilisation), rien n'est modifi\'e9 et la fen\'eatre l'indique.\par
+2. Chaque livre qui va changer est enregistr\'e9 en entier sous le nom Backup_LIVRE_date-heure.bak dans le dossier local\\NumberedBookTitles du projet, que Envoyer/Recevoir ne partage pas.\par
+3. Seules les lignes coch\'e9es sont modifi\'e9es, et seulement le texte apr\'e8s leur marqueur. L'en-t\'eate est dans le chapitre 1 : seul ce chapitre est donc \'e9crit, et seulement dans les livres que vous pouvez modifier. Les lignes des livres que vous ne pouvez pas modifier sont gris\'e9es et marqu\'e9es \'ab lecture seule \'bb.\par
+4. Si l'en-t\'eate d'un livre a chang\'e9 apr\'e8s l'analyse, ce livre n'est pas touch\'e9 et il est list\'e9 : cliquez sur \'ab Analyser \'e0 nouveau \'bb et r\'e9essayez.\par
+5. La zone des r\'e9sultats indique ce qui a \'e9t\'e9 modifi\'e9 dans chaque livre, et ce qui ne l'a pas \'e9t\'e9. La liste est ensuite analys\'e9e \'e0 nouveau.\par
+}

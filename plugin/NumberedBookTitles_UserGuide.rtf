@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+\viewkind4\uc1
+\pard\sa200\sl276\slmult1\f0\fs28\b NUMBERED BOOK TITLES 1.1 (PARATEXT PLUGIN)\b0\fs22\par
+\par
+\b PURPOSE\b0\par
+Numbered Book Titles is a Paratext plugin. It checks that the numbered books (1 Samuel to 2 Chronicles, 1 Corinthians to 3 John) write their number the same way, and changes the lines you choose to the usual way. It finds the same differences as the "Numbered books" section of the Report of TOC custom check.\par
+Each of these fields is compared on its own across the numbered books:\par
+\tab \\h, \\toc1, \\toc2, \\toc3 and the main title (\\mt, \\mt1, \\mt2 ... joined in the order they appear).\par
+\tab The long, short and abbreviation names in BookNames.xml.\par
+For each field the plugin works out how the number is written in each book:\par
+\tab A number and a space (1 Juan), a number and a non-breaking space, a number with no space (1Juan), a number and a period (1. Juan).\par
+\tab A number with an ending: 1st, 2nd, 1er, 1ro, 1.\'ba, 1\'aa, 2e and similar.\par
+\tab A Roman numeral (I Juan, II Juan), or a number or Roman numeral after the name (Juan 1, Juan II).\par
+\tab A word (Primera, Segundo, First).\par
+The way most books write it in that field is the usual one, and every book that writes it differently is listed. Different fields may use different ways: \\toc1 can use a word ("Primera carta de Juan") while \\toc2 uses a number ("1 Juan"). If no way is clearly the most common, every book in that field is listed.\par
+Two ordinal words are not compared with each other: "First" and "Primera" count as the same way, and "Primer libro" beside "Primera carta" is correct grammar, not a difference.\par
+\par
+\b INSTALLING\b0\par
+1. Download Install_Phils_tools.exe from the Paratext_Plugins folder. If your browser warns about the file, choose to keep it.\par
+2. Close Paratext.\par
+3. Double-click Install_Phils_tools.exe. If Windows says it protected your PC, click "More info", then "Run anyway" (the installer is not signed yet).\par
+4. Tick Numbered Book Titles and click "Install / update ticked". It installs into every Paratext 9 on the computer. If Windows asks for permission, click Yes. The same window updates the plugin later (its status then says "Update available") or removes it ("Remove ticked"), and its "User guide" button opens this guide.\par
+\par
+\b HOW TO USE\b0\par
+1. Open the project in a Scripture window and choose Tools > Numbered Book Titles...\par
+2. The Differences tab lists one row per book and field that differs: the book, the field, the marker line, the text now, how the number is written there, the usual way in that field, and the suggested new text ("Change to"). Nothing is changed yet.\par
+3. Double-click a row, or select it and click "Go to in Paratext", to go to the book's header in Paratext. The window stays open beside Paratext.\par
+4. Check the text in "Change to". Click it to type a different text. When no new text can be worked out safely, the cell says "(type the new text)". Typing a text ticks the row.\par
+5. Tick the rows to change ("Tick all that can change" ticks every row that has a new text), then click "Change ticked lines" and answer Yes.\par
+The "All numbered books" tab shows every numbered book and field in one table, with the usual way at the top and the cells that differ highlighted.\par
+\par
+\b THE SUGGESTED TEXT\b0\par
+\tab When the usual way uses a number, the number is written that way in front of (or after) the rest of the text: "1st Tesalonicenses" and "Primero Pedro" become "1 Tesalonicenses" and "1 Pedro", "II Juan" becomes "2 Juan".\par
+\tab A word is replaced by a number only when the rest of the text is the book's name as another field of the same book writes it after a number. So "Primera carta a los Corintios" is not turned into "1 carta a los Corintios": type the text yourself.\par
+\tab When the usual way uses a word, \\toc1 takes the \\mt title, and a single \\mt line takes \\toc1. Otherwise the word is taken from the other books with the same number, if they all use the same word.\par
+\tab For \\mt, only the \\mt line that holds the number is changed: the first one, or the last one when the number comes after the name.\par
+BookNames.xml names cannot be changed by a plugin. Change them in Paratext: Scripture reference settings..., Book names tab.\par
+\par
+\b WHAT HAPPENS WHEN YOU CHANGE\b0\par
+1. A point is added to the project history ("Numbered Book Titles: before changing ..."). If Paratext cannot record it (for example because the project is in use), nothing is changed and the window says so.\par
+2. Each book that will change is saved whole as Backup_BOOK_date-time.bak in the project's local\\NumberedBookTitles folder, which Send/Receive does not share.\par
+3. Only the ticked lines are changed, and only the text after their marker. The header is in chapter 1, so only that chapter is written, and only in books you may edit. Rows in books you may not edit are grey and marked "cannot edit".\par
+4. If the header of a book changed after the scan, that book is left alone and listed: click "Scan again" and try again.\par
+5. The results box lists what was changed in each book, and anything not changed. The list is then scanned again.\par
+}
